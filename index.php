@@ -12,8 +12,19 @@ if ($_SERVER["REQUEST_METHOD"])
     <title>Document</title>
 </head>
 <body>
-<table>
-    <tr></tr>
+<table style="border: solid 1px; background-color: pink">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+    </tr>
+    <?php foreach($student as $key => $value):?>
+        <tr>
+            <td><?php echo $value["name"] ?></td>
+            <td><?php echo $value["age"] ?></td>
+            <td><?php echo $value["address"] ?></td>
+        </tr>
+    <?php endforeach;?>
 </table>
 </body>
 </html>
